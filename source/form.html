@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Пинк</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header_logo" href="#">
+          <img class="page-header_logo-image" src="img/header_logo.svg" width="75" height="22" alt="Логотип Пинк">
+      </a>
+      <nav class="main-navigation">
+        <ul class="main-navigation_list">
+          <li class="main-navigation_item main-navigation_item--active">
+            <a>Главная</a>
+          </li>
+          <li class="main-navigation_item">
+            <a href="#">Фотографии</a>
+          </li>
+          <li class="main-navigation_item">
+            <a href="#">Конкурс</a>
+          </li>
+          <li class="main-navigation_item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="form-page">
+      <h1 class="form-page_header main-header">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <section class="application-form">
+        <h2 class="application-form_title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
+        <form class="main-form">
+          <fieldset class="main-form_fieldset main-form_fieldset--data user-data">
+            <label for="surname-id" class="main-form_data-label">Фамилия:</label>
+            <input class="user-data_item user-data_item--surname" name="surname" id="surname-id" type="text" placeholder="Укажите фамилию *">
+            <label for="name-id" class="main-form_data-label">Имя:</label>
+            <input class="user-data_item user-data_item--name" name="name" id="name-id" type="text" placeholder="Введите ваше имя *">
+            <label for="fathersname-id" class="main-form_data-label">Отчество:</label>
+            <input class="user-data_item user-data_item--fathersname" name="fathersname" id="fathersname-id" type="text" placeholder="Ну и отчество тоже">
+          </fieldset>
+          <fieldset class="main-form_fieldset main-form_fieldset--filters user-achievements">
+            <legend class="main-form_title">Ваши безбашенные достижения в путешествии</legend>
+            <ul class="main-form_list main-form_list--filter-list">
+              <li class="main-form_item main-form_item--checkbox-item">
+                <input class="visually-hidden main-form_input" type="checkbox" name="selfieing" id="selfie-checkbox" checked>
+                <label for="selfie-checkbox" class="main-form_filter-label">Сделал селфи с акулой</label>
+              </li>
+              <li class="main-form_item main-form_item--checkbox-item">
+                <input class="visually-hidden main-form_input" type="checkbox" name="burning" id="burn-checkbox" checked>
+                <label for="burn-checkbox" class="main-form_filter-label">Обгорел на пляже</label>
+              </li>
+              <li class="main-form_item main-form_item--checkbox-item">
+                <input class="visually-hidden main-form_input" type="checkbox" name="chuck-spotting" id="chuck-checkbox">
+                <label for="chuck-checkbox" class="main-form_filter-label">Видел Чака Норриса</label>
+              </li>
+              <li class="main-form_item main-form_item--checkbox-item">
+                <input class="visually-hidden main-form_input" type="checkbox" name="shopping" id="souveniers-checkbox">
+                <label for="souveniers-checkbox" class="main-form_filter-label">Накупил сувениров</label>
+              </li>
+              <li class="main-form_item main-form_item--checkbox-item">
+                <input class="visually-hidden main-form_input" type="checkbox" name="tower-holding" id="tower-checkbox" checked>
+                <label for="tower-checkbox" class="main-form_filter-label">Удержал башню</label>
+              </li>
+              <li class="main-form_item main-form_item--checkbox-item">
+                <input class="visually-hidden main-form_input" type="checkbox" name="hotel-destroing" id="hotel-checkbox">
+                <label for="hotel-checkbox" class="main-form_filter-label">Разгромил отель</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="main-form_fieldset main-form_fieldset--data">
+            <label for="phone-number-id" class="main-form_data-label">Номер телефона:</label>
+            <input class="user-data_item user-data_item--surname" name="phone-number" id="phone-number-id" type="text" placeholder="Номер, пожалуйста">
+            <label for="email-id" class="main-form_data-label">адрес почты</label>
+            <input class="user-data_item user-data_item--name" name="email" id="email-id" type="text" placeholder="Введите почту *">
+          </fieldset>
+          <fieldset class="main-form_fieldset main-form_fieldset--filters user-application">
+            <legend class="main-form_title">С каким приложением путешествовали?</legend>
+            <ul class="main-form_list main-form_list--filter-list">
+              <li class="main-form_item main-form_item--radio-item">
+                <input class="visually-hidden main-form_input" type="radio" name="ios" id="ios-radio" checked>
+                <label for="ios-radio" class="main-form_filter-label">Pink для iOS</label>
+              </li>
+              <li class="main-form_item main-form_item--radio-item">
+                <input class="visually-hidden main-form_input" type="radio" name="android" id="android-radio" checked>
+                <label for="android-radio" class="main-form_filter-label">Pink для android</label>
+              </li>
+              <li class="main-form_item main-form_item--radio-item">
+                <input class="visually-hidden main-form_input" type="radio" name="windows" id="windows-radio" checked>
+                <label for="windows-radio" class="main-form_filter-label">Windows Phone</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="main-form_fieldset main-form_fieldset--data">
+            <label for="message-id" class="main-form_data-label">Опишите свои эмоции</label>
+            <textarea class="user-data_item user-data_item--message" name="message" id="message-id" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </fieldset>
+          <button class="main-form_button">Отправить форму</button>
+          <p class="main-form_info"><sub>*</sub><span> — обязательные поля</span></p>
+        </form>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <a class="page-footer_logo" href="#">
+          <img class="page-footer_logo-image" src="img/footer_logo.svg" width="147" height="40" alt="Логотип Пинк">
+      </a>
+      <ul class="social-list">
+        <li class="social-list_item">
+          <a class="social-list_link social-list_link--twitter" href="#" aria-label="Пинк в Твиттере">tw</a>
+        </li>
+        <li class="social-list_item">
+          <a class="social-list_link social-list_link--facebook" href="#" aria-label="Пинк в Фэйсбуке">fb</a>
+        </li>
+        <li class="social-list_item">
+          <a class="social-list_link social-list_link--youtube" href="#" aria-label="Пинк в Ютюб">yt</a>
+        </li>
+      </ul>
+      <p class="developer">
+        <span class="developer_text">Разработано</span>
+        <a class="developer_link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="интенсив «Профессиональный HTML и CSS, уровень 2">svg logo</a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+  min-height: 720px;
+
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.page__header--main {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 258px;
+    height: 286px;
+
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
+
+.page-header__item--top-navigation {
+  display: flex;
+  justify-content: space-between;
+  min-width: 69px;
+  min-height: 24px;
+  padding: 20px;
+
+  background-color: #1d2631;
+  box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.page-header__logo {
+  &:hover path {
+    fill: @pink;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-header__button {
+  width: 50px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+
+  background-color: inherit;
+  border: none;
+}
+
+.page-header__info-title {
+  width: 244px;
+  min-height: 91px;
+  margin: 0;
+  padding: 28px 38px 52px;
+
+  font-weight: 300;
+  font-size: 24px;
+  font-family: @main-font;
+  text-align: center;
+  color: #ffffff;
+}

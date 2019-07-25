@@ -12,6 +12,7 @@
 
 .page__header--main {
   position: relative;
+
   &::after {
     content: "";
     position: absolute;
@@ -41,10 +42,11 @@
 .page-header__logo {
   &:hover path {
     fill: @pink;
-  };
+  }
+
   &:active {
     opacity: 0.3;
-  };
+  }
 }
 
 .page-header__button {
@@ -60,12 +62,14 @@
 .main-navigation {
   display: flex;
   flex-direction: column;
+
   &__list {
     margin: 0;
     padding: 0;
 
-    list-style: none;;
+    list-style: none;
   }
+}
 
 .main-navigation__item {
   min-height: 32px;
@@ -80,16 +84,18 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
-  font-family: "Open Sans";
+  font-family: @main-font;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
+
   &:hover {
     color: @pink;
-  };
+  }
+
   &:active {
     opacity: 0.3;
-  };
+  }
 }
 
 .page-header__info-title {
@@ -100,7 +106,7 @@
 
   font-weight: 300;
   font-size: 24px;
-  font-family: "Open Sans";
+  font-family: @mnain-font;
   text-align: center;
   color: #ffffff;
 }

@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-.review__title {
+.review__name {
   margin: 0;
   padding: 0;
 
@@ -29,6 +29,9 @@
   font-family: @main-font;
   color: #283645;
 }
+.review__charachter {
+  display: none;
+}
 @media (min-width: @tablet-width) {
   .review {
     display: flex;
@@ -41,22 +44,28 @@
     text-align: center;
   }
 
-  .review__title {
+  .review__name {
     order: 2;
-    margin: 0;
-    padding: 0;
+    margin-top: 34px;
 
     font-weight: 700;
-    font-size: 18px;
-    line-height: 30px;
-    font-family: @main-font;
-    color: #000000;
+    font-size: 20px;
   }
 
   .review__text {
+    order: 1;
+    margin: 0;
+    padding: 0 20px;
+    padding-top: 14px;
+
+    font-size: 18px;
+    color: #283645;
+  }
+  .review__charachter {
+    display: block;
+    order: 3;
     margin: 0;
     padding: 0;
-    padding-top: 14px;
 
     font-weight: 400;
     font-size: 14px;

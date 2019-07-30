@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  max-width: auto;
+
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 -60px;
+}
+
+.main__header {
+  width: 244px;
+  min-height: 91px;
+  margin: 0;
+  padding: 28px 38px 52px;
+
+  font-weight: 300;
+  font-size: 24px;
+  font-family: @main-font;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .main {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: -280px -109px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main {
+    max-width: 940px;
+    margin: 0 auto;
+
+    background: none;
+  }
+}

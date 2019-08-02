@@ -3,6 +3,7 @@
   flex-direction: column;
   max-width: auto;
 
+  background-color: #293646;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 0 -60px;
@@ -23,15 +24,34 @@
 
 @media (min-width: @tablet-width) {
   .main {
+    width: 100%;
+    max-width: 660px;
+
+    background-color: #293646;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: -280px -109px;
   }
+  .main__header {
+    width: 350px;
+    min-height: 155px;
+    margin: 0;
+    padding: 75px 155px 100px;
+
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 55px;
+    font-family: @main-font;
+    text-align: center;
+    color: #ffffff;
+  }
 }
+
 
 @media (min-width: @desktop-width) {
   .main {
-    max-width: 940px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
 
     background: none;

@@ -88,6 +88,7 @@
     padding: 0;
 
     background: none;
+    background-color: #ffffff;
 
     &::after {
       content: "";
@@ -132,10 +133,11 @@
     min-height: 481px;
     margin: 0;
     padding: 0;
-    /*
+
     background-image: url("../img/Shape_grey.png");
     background-repeat: no-repeat;
-    background-position: 0 -54px;*/
+    background-size: cover;
+    /*background-position: 0 -54px;*/
 
     &::after {
       content: "";
@@ -194,13 +196,22 @@
 
 @media (min-width: @desktop-width) {
   .intro {
+    max-width: 1200px;
+
+    background-color: #ffffff;
+    background-image: url("../img/Shape_grey.png");
+    background-repeat: no-repeat;
+    background-position: 0 324px;
+    background-size: contain;
+  }
+  .intro__container {
     position: relative;
 
     width: 100%;
     max-width: 940px;
     min-height: 950px;
+    margin: 0 auto;
 
-    background: none;
 
     &::after {
       content: "";
@@ -246,6 +257,8 @@
     min-height: 481px;
     margin: 0;
     padding: 0;
+
+    background: none;
     /*
     background-image: url("../img/Shape_grey.png");
     background-repeat: no-repeat;

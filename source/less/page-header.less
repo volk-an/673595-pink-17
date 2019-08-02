@@ -1,4 +1,8 @@
-.page-header {
+
+.page__header {
+  max-width: 330px;
+}
+.page-header__container {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -39,7 +43,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-header {
+  .page-header__container {
     min-height: 365px;
   }
 
@@ -62,13 +66,19 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    background-color: #2d3d4e80;
+  }
+
+  .page-header__container {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-width: 940px;
     min-height: 110px;
     margin: 0 auto;
-
-    opacity: 0.3;
   }
 
   .page-header__button {

@@ -1,3 +1,6 @@
+.user-photo {
+  background-color: #ffffff;
+}
 .user-photo__header {
   width: 244px;
   min-height: 74px;
@@ -20,10 +23,14 @@
 }
 
 .user-photo__list {
+  width: 280px;
   margin: 0;
+  margin: 0 20px;
   padding: 0;
 
   list-style: none;
+
+  background-color: #ffffff;
 }
 
 .user-photo__item {
@@ -36,7 +43,7 @@
   display: block;
   width: 280px;
   height: 180px;
-  margin: 0 20px;
+  margin: 0;
   padding: 0;
 
   text-align: center;
@@ -49,10 +56,13 @@
 }
 
 .user-photo__wrap {
-  margin: 0 20px;
+  margin: 0;
   padding: 14px 23px 25px 17px;
 
   background-color: #f2f2f2;
+}
+.user-photo__wrap--panorama {
+  margin: 0 20px;
 }
 
 .user-photo__title {
@@ -105,4 +115,128 @@
   font-family: @main-font;
   color: #d22856;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .user-photo {
+    width: 100%;
+  }
+
+  .user-photo__header {
+    width: 460px;
+    min-height: 50px;
+    padding: 90px 110px 78px;
+
+    font-size: 18px;
+    &--down {
+      padding: 40px 100px 70px;
+    }
+  }
+
+  .user-photo__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 620px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .user-photo__item {
+    width: 300px;
+    min-height: 455px;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  .user-photo__item--panorama {
+    width: 100%;
+    max-width: 660px;
+    margin-bottom: 50px;
+  }
+
+  .user-photo__link {
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+  }
+  .user-photo__wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 120px;
+    margin: 0;
+    padding: 15px 27px;
+
+    background-color: #f2f2f2;
+  }
+
+  .user-photo__title {
+    margin: 0;
+    padding: 0;
+  }
+
+  .user-photo__name {
+    margin: 0;
+    padding: 0;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: @main-font;
+    color: #283645;
+  }
+
+  .user-photo__time {
+    margin: 0;
+    padding: 0;
+
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 24px;
+    font-family: @main-font;
+    color: #283645;
+    text-transform: uppercase;
+  }
+
+  .user-photo__text {
+    margin: 0;
+    padding: 0;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: @main-font;
+    color: #283645;
+  }
+  .user-photo__likes {
+    margin-top: auto;
+    padding: 0;
+  }
+
+
+  .user-photo__link--panorama {
+    width: 660px;
+    height: 509px;
+    margin: 0;
+
+    background-size: contain;
+  }
+
+  .user-photo__wrap--panorama {
+    position: relative;
+
+    width: 510px;
+    min-height: 80px;
+    margin: 0 auto;
+    padding: 20px 84px 20px 26px;
+  }
+  .user-photo__likes--panorama {
+    position: absolute;
+    top: 20px;
+    right: 0;
+  }
 }

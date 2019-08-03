@@ -1,5 +1,7 @@
 @pink: #d22856;
 @main-font: "Open Sans", Arial, Sans-serif;
+@tablet-width: 660px;
+@desktop-width: 960px;
 
 body {
   max-width: 320px;
@@ -9,6 +11,33 @@ body {
   font-size: 18px;
   line-height: 30px;
   font-family: @main-font;
+}
+
+@media (min-width: @tablet-width) {
+  body {
+    max-width: 660px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .site-body__container {
+    background-color: #2d3d4e;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -28,9 +57,12 @@ body {
 @import "page-header.less";
 @import "main-navigation.less";
 @import "download-app.less";
-@import "main-page.less";
 @import "intro.less";
 @import "review.less";
 @import "page-footer.less";
 @import "social-list";
 @import "user-photo.less";
+@import "main.less";
+@import "researching.less";
+@import "editor.less";
+@import "application-form.less";

@@ -1,36 +1,19 @@
-.page-header {
+.page__header {
+  max-width: 330px;
+}
+
+.page-header__container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 320px;
-  min-height: 720px;
-
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-}
-
-.page__header--main {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: 258px;
-    height: 286px;
-
-    background-image: url("../img/iphone-hand-mobile@1x.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
-  }
+  max-width: auto;
+  min-height: 326px;
 }
 
 .page-header__item--top-navigation {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   min-width: 69px;
   min-height: 24px;
   padding: 20px;
@@ -59,15 +42,62 @@
   border: none;
 }
 
-.page-header__info-title {
-  width: 244px;
-  min-height: 91px;
-  margin: 0;
-  padding: 28px 38px 52px;
+@media (min-width: @tablet-width) {
+  .page-header__container {
+    min-height: 365px;
+  }
 
-  font-weight: 300;
-  font-size: 24px;
-  font-family: @main-font;
-  text-align: center;
-  color: #ffffff;
+  .page-header__logo {
+    width: 147px;
+    height: 40px;
+  }
+
+  .page-header__item--top-navigation {
+    display: flex;
+    justify-content: space-between;
+    min-width: 620px;
+    min-height: 41px;
+    padding: 27px 20px 42px;
+
+    background-color: #1d2631;
+    box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    background-color: #2d3d4e80;
+  }
+
+  .page-header__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 940px;
+    min-height: 110px;
+    margin: 0 auto;
+  }
+
+  .page-header__button {
+    display: none;
+  }
+
+  .page-header__logo {
+    width: 147px;
+    height: 40px;
+  }
+
+  .page-header__item--top-navigation {
+    display: flex;
+    justify-content: space-between;
+    min-width: 147px;
+    min-height: 40px;
+    padding: 0;
+
+    background: none;
+    box-shadow: none;
+  }
 }

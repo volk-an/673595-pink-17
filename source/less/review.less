@@ -1,8 +1,8 @@
 .review {
   width: 284px;
-  min-height: 330px;
+  min-height: 310px;
   margin: 0;
-  padding: 48px 18px;
+  padding: 0 18px;
 
   text-align: center;
 
@@ -11,6 +11,7 @@
 
 .review__name {
   margin: 0;
+  margin-top: 40px;
   padding: 0;
 
   font-weight: 700;
@@ -38,9 +39,6 @@
 
 @media (min-width: @tablet-width) {
   .review {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 660px;
     min-height: 260px;
     margin: 0;
@@ -49,8 +47,16 @@
     background-color: #ffffff;
   }
 
+  .review__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 660px;
+    min-height: 260px;
+    margin: 0;
+    padding: 0;
+  }
   .review__name {
-    order: 2;
     margin-top: 34px;
 
     font-weight: 700;
@@ -58,7 +64,7 @@
   }
 
   .review__text {
-    order: 1;
+    order: -1;
     margin: 0;
     padding: 0 20px;
     padding-top: 14px;
@@ -69,7 +75,6 @@
 
   .review__charachter {
     display: block;
-    order: 3;
     margin: 0;
     padding: 0;
 
@@ -83,18 +88,64 @@
 
 @media (min-width: @desktop-width) {
   .review {
-    width: 1200px;
+    position: relative;
+
+    width: 100%;
+    max-width: 1200px;
 
     background-color: #ffffff;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 72px;
+      left: 50%;
+
+      width: 74px;
+      height: 60px;
+      margin-left: -37px;
+
+      background-image: url("../img/icon-quotes.svg");
+      background-size: contain;
+      opacity: 0.3;
+    }
   }
 
   .review__container {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 960px;
+    width: 100%;
+    max-width: 940px;
     min-height: 405px;
     margin: 0 auto;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 200px;
+      left: 0;
+
+      width: 22px;
+      height: 41px;
+
+      background-image: url("../img/icon-review-arrow-left.svg");
+      background-size: contain;
+      opacity: 0.3;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 200px;
+      right: 0;
+
+      width: 22px;
+      height: 41px;
+
+      background-image: url("../img/icon-review-arrow-right.svg");
+      background-size: contain;
+      opacity: 0.3;
+    }
   }
 
   .review__name {
@@ -105,11 +156,11 @@
   }
 
   .review__text {
-    order: 1;
+    order: -1;
     width: 730px;
     margin: 0;
+    margin-top: 185px;
     padding: 0 20px;
-    padding-top: 90px;
 
     font-weight: 400;
     font-size: 18px;

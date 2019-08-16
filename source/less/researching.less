@@ -4,13 +4,73 @@
 
 @media (min-width: @tablet-width) {
   .researching {
+    display: block;
+
+    background-color: #f2f2f2;
+  }
+  .researching__container {
+    position: relative;
+
     display: flex;
     width: 660px;
     min-height: 418px;
 
     background-color: #ffffff;
+    /*&::before {
+      content: "";
+      position: absolute;
+      top: 58px;
+      left: 20px;
+
+      width: 238px;
+      height: 276px;
+
+      background-image: url("../img/icon-timer.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0.3;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 114px;
+      left: 36px;
+
+      width: 202px;
+      height: 202px;
+
+      background-image: url("../img/diagram-fill.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }*/
+  }
+  .researching__timer {
+    position: relative;
+
+    width: 238px;
+    height: 276px;
+    margin-top: 58px;
+    margin-left: 20px;
   }
 
+  .researching__hours {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 106px;
+    min-height: 70px;
+    margin: 0;
+    margin-top: -69px;
+    margin-left: -60px;
+    padding: 0;
+
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 150px;
+    font-family: "Open Sans";
+    color: @pink;
+  }
   .researching__wrap {
     display: flex;
     flex-direction: column;
@@ -57,14 +117,52 @@
 }
 
 @media (min-width: @desktop-width) {
-  .researching {
+  .researching__container {
     display: flex;
-    width: 960px;
+    width: 100%;
+    max-width: 940px;
     min-height: 412px;
     margin: 0 auto;
-    padding: 0 130px;
+    padding: 0;
 
-    background-color: #ffffff;
+    background-color: #f2f2f2;
+  }
+  .researching__timer {
+    position: relative;
+
+    width: 298px;
+    height: 345px;
+    margin: 0;
+
+
+    /*
+  &::before {
+    content: "";
+    position: absolute;
+    top: 58px;
+    left: 20px;
+
+    width: 298px;
+    height: 345px;
+
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.3;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 114px;
+    left: 36px;
+
+    width: 253px;
+    height: 253px;
+
+    background-image: url("../img/diagram-fill.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }*/
   }
 
   .researching__wrap {
@@ -81,7 +179,7 @@
 
   .researching__text {
     margin: 0;
-    padding: 210px 50px 5px 20px;
+    padding: 20px 50px 5px 20px;
 
     font-size: 18px;
     line-height: 30px;
@@ -93,5 +191,16 @@
 
     font-size: 18px;
     line-height: 30px;
+  }
+  .researching__hours {
+    z-index: 1;
+
+    width: 131px;
+    min-height: 87px;
+    margin-top: -70px;
+    margin-left: -70px;
+
+    font-size: 120px;
+    line-height: 186px;
   }
 }

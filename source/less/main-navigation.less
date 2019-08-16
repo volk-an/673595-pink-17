@@ -1,6 +1,4 @@
 .main-navigation {
-  min-height: 252px;
-
   background-color: #283645;
 
   &__list {
@@ -35,6 +33,11 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+@media (max-width: @mobile-tablet-only) {
+  .main-navigation--closed {
+    display: none;
   }
 }
 

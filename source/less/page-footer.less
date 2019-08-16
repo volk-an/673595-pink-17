@@ -2,7 +2,11 @@
   width: 100%;
   max-width: 320px;
 }
-
+@media (max-width: @tablet-width) {
+  .page-footer--index {
+    display: none;
+  }
+}
 .page-footer__container {
   width: 240px;
   padding: 40px;
@@ -71,7 +75,7 @@
   }
 
   .page-footer__developer {
-    width: 140px;
+    width: 130px;
     margin: 0;
   }
 }

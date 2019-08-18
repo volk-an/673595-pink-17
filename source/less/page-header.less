@@ -3,27 +3,35 @@
   margin: 0 auto;
 
   background-color: #283645;
-  box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  /*  box-shadow: 0 1px 0 #000000, inset 0 2px 0 rgba(255, 255, 255, 0.15);*/
 }
 
 .page-header__container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 320px;
   margin: 0 auto;
+
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
 }
 
-.page-header__item--top-navigation {
+.page-header__top-navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 69px;
+  width: 280px;
   min-height: 24px;
+  margin: 0 auto;
   padding: 20px;
 
-  background-color: #283645;
-  box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  background-color: rgba(40, 54, 69, 1);
+  /*box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);*/
+}
+
+.page-header__top-navigation--closed {
+  background-color: rgba(40, 54, 69, 0.7);
 }
 
 .page-header__logo,
@@ -79,29 +87,39 @@
 @media (min-width: @tablet-width) {
   .page-header {
     width: 100%;
+    /*background-color: #283645;*/
 
-    background-color: #283645;
-    box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    background-color: rgba(40, 54, 69, 1);
+    /*box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);*/
+  }
+  .page-header--closed {
+    background-color: rgba(40, 54, 69, 0.7);
   }
   .page-header__container {
     width: 100%;
-    max-width: 660px;
     margin: 0 auto;
+
+    background: none;
   }
   .page-header__logo {
+    display: block;
     width: 147px;
     height: 40px;
+    margin: 0;
+    padding: 0;
   }
 
-  .page-header__item--top-navigation {
+  .page-header__top-navigation {
     display: flex;
     justify-content: space-between;
-    min-width: 620px;
+    width: 620px;
     min-height: 41px;
     padding: 27px 20px 42px;
 
-    background-color: #283645;
-    box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    background: none;
+    /*background-color: #283645;*/
+    /*box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);*/
+    box-shadow: none;
   }
 
   .page-header__togle-wrap {
@@ -146,15 +164,17 @@
   }
 
   .page-header__logo {
+    display: block;
     width: 147px;
-    height: 40px;
+    height: 60px;
   }
 
-  .page-header__item--top-navigation {
+  .page-header__top-navigation {
     display: flex;
-    justify-content: space-between;
-    min-width: 147px;
-    min-height: 40px;
+    justify-content: flex-start;
+    width: 147px;
+    min-height: 60px;
+    margin: 0;
     padding: 0;
 
     background: none;

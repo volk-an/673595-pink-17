@@ -1,12 +1,17 @@
-.page__header {
-  max-width: 330px;
+.page-header {
+  width: 100%;
+  margin: 0 auto;
+
+  background-color: #283645;
+  box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .page-header__container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: auto;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .page-header__item--top-navigation {
@@ -64,7 +69,7 @@
 
 .page-header__button--close {
   top: 0;
-  right: 0;
+  right: -14px;
 }
 
 .page-header__buton--togle {
@@ -72,6 +77,17 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-header {
+    width: 100%;
+
+    background-color: #283645;
+    box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+  .page-header__container {
+    width: 100%;
+    max-width: 660px;
+    margin: 0 auto;
+  }
   .page-header__logo {
     width: 147px;
     height: 40px;
@@ -84,7 +100,7 @@
     min-height: 41px;
     padding: 27px 20px 42px;
 
-    background-color: #1d2631;
+    background-color: #283645;
     box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
   }
 
@@ -110,7 +126,7 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 
     background-color: #2d3d4e80;

@@ -1,21 +1,30 @@
 .intro {
-  position: relative;
-
-  max-width: 260px;
-  min-height: 963px;
-  margin: 0;
-  padding: 40px 30px;
-  padding-bottom: 0;
+  width: 100%;
 
   background-color: #ffffff;
   background-image: url("../img/Shape_grey.png");
   background-repeat: no-repeat;
   background-position: bottom;
+}
+
+.intro__container {
+  position: relative;
+
+  max-width: 260px;
+  min-height: 930px;
+  margin: 0 auto;
+  padding: 40px 0;
+  padding-bottom: 0;
+
+  /*background-color: #ffffff;
+  background-image: url("../img/Shape_grey.png");
+  background-repeat: no-repeat;
+  background-position: bottom;*/
 
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -30px;
     left: 50%;
 
     width: 158px;
@@ -85,6 +94,9 @@
 
 @media (min-width: @tablet-width) {
   .intro {
+    background-position: -90px 190px;
+  }
+  .intro__container {
     position: relative;
 
     width: 100%;
@@ -94,7 +106,7 @@
     padding: 0;
 
     background: none;
-    background-color: #ffffff;
+    /*  background-color: #ffffff;*/
 
     &::after {
       content: "";
@@ -142,10 +154,10 @@
     margin: 0;
     padding: 0;
 
-    background-image: url("../img/Shape_grey.png");
+    /*background-image: url("../img/Shape_grey.png");
     background-repeat: no-repeat;
     background-size: cover;
-    /*background-position: 0 -54px;*/
+    background-position: 0 -54px;*/
 
     &::after {
       content: "";
@@ -204,8 +216,6 @@
 
 @media (min-width: @desktop-width) {
   .intro {
-    max-width: 1200px;
-
     background-color: #ffffff;
     background-image: url("../img/Shape_grey.png");
     background-repeat: no-repeat;

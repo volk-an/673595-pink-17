@@ -1,0 +1,26 @@
+.price {
+  width: 100%;
+  min-height: 475px;
+
+  background-color: #ffffff;
+  background-image: url("../img/Shape_grey.png");
+  background-repeat: no-repeat;
+  background-position: 0 -45px;
+}
+
+@media (min-width: @tablet-width) {
+  .price {
+    min-height: 385px;
+
+    background-position: 0 0;
+    background-size: cover;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price {
+    min-height: 534px;
+
+    background-size: cover;
+  }
+}

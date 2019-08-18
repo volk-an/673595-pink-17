@@ -1,12 +1,15 @@
 .review {
-  width: 284px;
-  min-height: 310px;
-  margin: 0;
-  padding: 0 18px;
-
-  text-align: center;
+  width: 100%;
 
   background-color: #ffffff;
+}
+.review__container {
+  width: 280px;
+  min-height: 310px;
+  margin: 0 auto ;
+  padding: 0;
+
+  text-align: center;
 }
 
 .review__name {
@@ -38,22 +41,13 @@
 }
 
 @media (min-width: @tablet-width) {
-  .review {
-    width: 660px;
-    min-height: 260px;
-    margin: 0;
-    padding: 0;
-
-    background-color: #ffffff;
-  }
-
   .review__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 660px;
     min-height: 260px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
   }
 
@@ -92,7 +86,6 @@
     position: relative;
 
     width: 100%;
-    max-width: 1200px;
 
     background-color: #ffffff;
 

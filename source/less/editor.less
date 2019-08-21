@@ -4,7 +4,9 @@
 
 .editor__container {
   width: 100%;
+  max-width: 320px;
   min-height: 760px;
+  margin: 0 auto;
 
   background-color: #f2f2f2;
 }
@@ -12,43 +14,107 @@
 .editor__image {
   margin: 20px;
 }
-.editor__wrap {
+.editor__form-wrap {
   min-height: 132px;
 }
 .editor__tool-list {
+  position: relative;
+
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  width: 280px;
-  min-height: 100px;
+  width: 250px;
   margin: 0 auto;
-  margin-top: 20px;
-  padding: 0;
+  /*margin-top: 20px;*/
+  padding: 12px 35px;
 
   list-style: none;
-
-  border-color: #ffffff;
-  border-bottom: 1px solid #dedfe1;
 }
 .editor__tool-item {
   width: 50px;
-  height: 50px;
+  height: 100px;
   margin: 0;
   padding: 0;
 }
-.editor__tool-button {
+.editor__tool-label {
+  width: 50px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+}
+.editor__input {
+  display: none;
+}
+.editor__input--active {
+  position: absolute;
+  top: 96px;
+  left: 40px;
+
+  display: block;
+  width: 240px;
+  height: 2px;
+  margin: 0;
+
+  background-color: #000000;
+  outline: none;
+
+  -webkit-appearance: none;
+}
+.editor__input::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid @pink;
+  border-radius: 50%;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+}
+.editor__input::-webkit-slider-thumb:active {
+  background-color: @pink;
+}
+/*.editor__tool-button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50px;
   height: 50px;
+  margin: 0;
+  padding: 0;
 
   background-color: inherit;
   border: none;
   /*& svg path {
     fill: #b5babe;
-  }*/
+  }
 }
+/*.editor__scale-wrap {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+
+  border-bottom: 1px solid #dedfe1;
+}
+
+.editor__scale {
+  position: relative;
+
+  width: 240px;
+  height: 2px;
+  margin-top: 13px;
+
+  background-color: #000000;
+}
+.editor-runner {
+  position: absolute;
+  top: -5px;
+  left: 190px;
+
+  width: 10px;
+  height: 10px;
+
+  border: 2px solid @pink;
+  border-radius: 50%;
+}*/
 .editor__button {
   display: block;
   width: 280px;
@@ -65,6 +131,7 @@
 
   background-color: inherit;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .editor__button--send {
@@ -88,7 +155,7 @@
   .editor__container {
     display: flex;
     justify-content: space-between;
-    width: 620px;
+    max-width: 620px;
     min-height: 400px;
     padding: 57px 20px;
   }
@@ -128,11 +195,10 @@
 @media (min-width: @desktop-width) {
   .editor {
     width: 100%;
-    max-width: 1200px;
   }
 
   .editor__container {
-    width: 800px;
+    max-width: 800px;
     min-height: 400px;
     margin: 0 auto;
     margin-bottom: 30px;
@@ -145,12 +211,14 @@
     margin: 0;
   }
 
-  .editor__wrap {
+  .editor__form-wrap {
     width: 410px;
     min-height: 400px;
   }
 
-  .editor__tools {
+  .editor__tool-list {
+    position: relative;
+
     min-height: 200px;
 
     border-color: #ffffff;

@@ -14,9 +14,7 @@
 .editor__image {
   margin: 20px;
 }
-.editor__form-wrap {
-  min-height: 132px;
-}
+
 .editor__tool-list {
   position: relative;
 
@@ -28,10 +26,12 @@
   padding: 12px 35px;
 
   list-style: none;
+
+  border-bottom: 1px solid #dedfe1;
 }
 .editor__tool-item {
   width: 50px;
-  height: 100px;
+  height: 110px;
   margin: 0;
   padding: 0;
 }
@@ -157,7 +157,7 @@
     justify-content: space-between;
     max-width: 620px;
     min-height: 400px;
-    padding: 57px 20px;
+    padding: 57px 20px 54px;
   }
 
   .editor__image {
@@ -166,16 +166,63 @@
     margin: 0;
   }
 
-  .editor__wrap {
+  .editor_form {
     width: 275px;
     min-height: 400px;
   }
 
-  .editor__tools {
+  .editor__tool-list {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 275px;
     min-height: 200px;
+    margin: 0 auto;
+    padding: 0;
 
-    border-color: #ffffff;
+    border-bottom: none;
+  }
+  .editor__tool-item {
+    position: relative;
+
+    width: 275px;
+    height: 55px;
+    margin: 0;
+    padding: 0;
+
     border-bottom: 1px solid #dedfe1;
+  }
+  .editor__tool-item svg {
+    width: 25px;
+    height: 30px;
+  }
+  .editor__tool-item--contrast svg {
+    width: 17px;
+    height: 17px;
+    padding-left: 5px;
+  }
+  .editor__tool-label {
+    display: block;
+    width: 30px;
+    margin: 0;
+    padding: 0;
+    padding-top: 8px;
+  }
+
+  .editor__input {
+    position: absolute;
+    top: 20px;
+    left: 52px;
+
+    display: block;
+    width: 202px;
+    height: 2px;
+    margin: 0;
+    padding: 0;
+
+    background-color: #000000;
+    outline: none;
+
+    -webkit-appearance: none;
   }
 
   .editor__button {
@@ -211,7 +258,7 @@
     margin: 0;
   }
 
-  .editor__form-wrap {
+  .editor__form {
     width: 410px;
     min-height: 400px;
   }

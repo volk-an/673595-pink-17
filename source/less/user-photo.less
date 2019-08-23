@@ -114,6 +114,8 @@
 }
 
 .user-photo__likes {
+  position: relative;
+
   margin: 0;
   margin-top: 5px;
   padding: 0 32px;
@@ -124,6 +126,20 @@
   font-family: @main-font;
   color: #d22856;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+
+    width: 15px;
+    height: 15px;
+
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -231,6 +247,19 @@
   .user-photo__likes {
     margin-top: auto;
     padding: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 225px;
+
+      width: 15px;
+      height: 15px;
+
+      background-image: url("../img/icon-heart.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   .user-photo__link--panorama {
@@ -256,7 +285,10 @@
   .user-photo__likes--panorama {
     position: absolute;
     top: 20px;
-    right: 0;
+    right: 60px;
+    &::after {
+      left: 110px;
+    }
   }
 }
 

@@ -1,20 +1,53 @@
 .application-form {
   width: 100%;
-  max-width: 320px;
+  margin: 0 auto;
 
   background-color: #ffffff;
+}
+.application-form__container {
+  width: 100%;
+  margin: 0 auto;
+}
+.application-form__header {
+  width: 276px;
+  min-height: 74px;
+  margin: 0 auto;
+  padding: 45px 3px 2px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  font-family: @main-font;
+  text-align: center;
+  color: #283645;
+}
+.application-form__text {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .application-form {
     width: 100%;
-    max-width: 960px;
+  }
+
+  .application-form__header {
+    width: 560px;
+    min-height: 50px;
+    padding: 90px 50px 10px;
+
+    font-size: 18px;
+  }
+  .application-form__text {
+    display: block;
+    margin: 0;
+    padding: 0;
   }
 }
+
+
 
 @media (min-width: @desktop-width) {
   .application-form {
     width: 100%;
-    max-width: 1200px;
   }
 }

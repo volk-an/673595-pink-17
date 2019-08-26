@@ -69,26 +69,28 @@
         <div class="application-form__container">
         <h2 class="application-form__header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="application-form__text">Пожалуйста, заполните форму ниже:</span></h2>
         <form class="main-form">
-          <fieldset class="main-form__fieldset main-form__fieldset--data user-data">
-            <ul class="main-form__list main-form__list--data-list">
-              <li class="main-form__item main-form__item--data-item">
-                <label for="surname-id" class="main-form__data-label">Фамилия:</label>
-                <input class="main-form__data-input main-form__data-input--surname" name="surname" id="surname-id" type="text" placeholder="Укажите фамилию *">
-              </li>
-              <li class="main-form__item main-form__item--data-item">
-                <label for="name-id" class="main-form__data-label">Имя:</label>
-                <input class="main-form__data-input main-form__data-input--name" name="name" id="name-id" type="text" placeholder="Введите ваше имя *">
-              </li>
-              <li class="main-form__item main-form__item--data-item">
-                <label for="fathersname-id" class="main-form__data-label">Отчество:</label>
-                <input class="main-form__data-input main-form__data-input--fathersname" name="fathersname" id="fathersname-id" type="text" placeholder="Ну и отчество тоже">
-              </li>
-            </ul>
-          </fieldset>
-          <div class="main-form__wrap-filters">
-            <fieldset class="main-form__fieldset main-form__fieldset--filters user-achievements">
+          <div class="main-form__wrap-data main-form__wrap-data--user-data">
+            <fieldset class="main-form__fieldset main-form__fieldset--data">
+              <ul class="main-form__list main-form__list--data-list">
+                <li class="main-form__item main-form__item--data-item">
+                  <label for="surname-id" class="main-form__data-label">Фамилия:</label>
+                  <input class="main-form__data-input main-form__data-input--surname" name="surname" id="surname-id" type="text" placeholder="Укажите фамилию *">
+                </li>
+                <li class="main-form__item main-form__item--data-item">
+                  <label for="name-id" class="main-form__data-label">Имя:</label>
+                  <input class="main-form__data-input main-form__data-input--name" name="name" id="name-id" type="text" placeholder="Введите ваше имя *">
+                </li>
+                <li class="main-form__item main-form__item--data-item">
+                  <label for="fathersname-id" class="main-form__data-label">Отчество:</label>
+                  <input class="main-form__data-input main-form__data-input--fathersname" name="fathersname" id="fathersname-id" type="text" placeholder="Ну и отчество тоже">
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="main-form__wrap-filters main-form__wrap-filters--user-achievements">
+            <fieldset class="main-form__fieldset main-form__fieldset--filters">
               <legend class="main-form__title">Ваши безбашенные достижения в путешествии</legend>
-              <ul class="main-form__list main-form__list--filter-list">
+              <ul class="main-form__list main-form__list--filter-list main-form__list--achievements-list">
                 <li class="main-form__item main-form__item--checkbox-item">
                   <input class="visually-hidden main-form__chekbox-input" type="checkbox" name="selfieing" id="selfie-checkbox" checked>
                   <label for="selfie-checkbox" class="main-form__filter-label">Сделал селфи с акулой</label>
@@ -116,16 +118,25 @@
               </ul>
             </fieldset>
           </div>
-          <fieldset class="main-form__fieldset main-form__fieldset--data">
-            <label for="phone-number-id" class="main-form__data-label">Номер телефона:</label>
-            <input class="main-form__data-input main-form__data-input--phone-number" name="phone-number" id="phone-number-id" type="text" placeholder="Номер, пожалуйста">
-            <label for="email-id" class="main-form__data-label">адрес почты</label>
-            <input class="main-form__data-input main-form__data-input--email" name="email" id="email-id" type="text" placeholder="Введите почту *">
-          </fieldset>
-          <div class="main-form__wrap-filters">
-            <fieldset class="main-form__fieldset main-form__fieldset--filters user-application">
+          <div class="main-form__wrap-data main-form__wrap-data--contacts">
+            <fieldset class="main-form__fieldset main-form__fieldset--contacts">
+              <legend class="main-form__title main-form__title--contacts">Контактная информация</legend>
+              <ul class="main-form__list main-form__list--data-list main-form__list--contacts-list">
+                <li class="main-form__item main-form__item--data-item main-form__item--contacs-item main-form__item--phone">
+                  <label for="phone-number-id" class="main-form__data-label main-form__data-label--contacts">Номер телефона:</label>
+                  <input class="main-form__data-input main-form__data-input--phone-number" name="phone-number" id="phone-number-id" type="text" placeholder="Номер, пожалуйста">
+                </li>
+                <li class="main-form__item main-form__item--data-item main-form__item--contacs-item main-form__item--email">
+                  <label for="email-id" class="main-form__data-label main-form__data-label--contacts">адрес почты</label>
+                  <input class="main-form__data-input main-form__data-input--email" name="email" id="email-id" type="text" placeholder="Введите почту *">
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="main-form__wrap-filters main-form__wrap-filters--user-application">
+            <fieldset class="main-form__fieldset main-form__fieldset--filters">
               <legend class="main-form__title">С каким приложением путешествовали?</legend>
-              <ul class="main-form__list main-form__list--radio">
+              <ul class="main-form__list main-form__list--filter-list">
                 <li class="main-form__item main-form__item--radio-item">
                   <input class="visually-hidden main-form__radio-input" type="radio" name="application" id="ios-radio" checked>
                   <label for="ios-radio" class="main-form__filter-label">Pink для iOS</label>
@@ -141,12 +152,17 @@
               </ul>
             </fieldset>
           </div>
-          <fieldset class="main-form__fieldset main-form__fieldset--data">
-            <label for="message-id" class="main-form__data-label main-form__data-label--message">Опишите свои эмоции</label>
-            <textarea class="main-form__data-input main-form__data-input--message" name="message" id="message-id" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-          </fieldset>
-          <button class="main-form__button">Отправить форму</button>
-          <p class="main-form__info"><sub>*</sub><span> — обязательные поля</span></p>
+          <div class="main-form__wrap-data main-form__wrap-data--message">
+            <fieldset class="main-form__fieldset main-form__fieldset--message">
+              <legend class="main-form__title">Опишите свои эмоции</legend>
+              <label for="message-id" class="visually-hidden main-form__data-label main-form__data-label--message">Опишите свои эмоции</label>
+              <textarea class="main-form__data-input main-form__data-input--message" name="message" id="message-id" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </fieldset>
+          </div>
+          <div class="main-form__wrap">
+            <button class="main-form__button">Отправить форму</button>
+            <p class="main-form__info"><sub>*</sub><span>—обязательные поля</span></p>
+          </div>
         </form>
       </div>
       </section>

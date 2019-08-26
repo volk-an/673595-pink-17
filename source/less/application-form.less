@@ -4,10 +4,12 @@
 
   background-color: #ffffff;
 }
+
 .application-form__container {
   width: 100%;
   margin: 0 auto;
 }
+
 .application-form__header {
   width: 276px;
   min-height: 74px;
@@ -21,6 +23,7 @@
   text-align: center;
   color: #283645;
 }
+
 .application-form__text {
   display: none;
 }
@@ -37,6 +40,7 @@
 
     font-size: 18px;
   }
+
   .application-form__text {
     display: block;
     margin: 0;
@@ -44,10 +48,20 @@
   }
 }
 
-
-
 @media (min-width: @desktop-width) {
   .application-form {
     width: 100%;
+  }
+
+  .application-form__header {
+    width: 780px;
+    min-height: 50px;
+    padding: 90px 100px 70px;
+
+    font-size: 18px;
+  }
+
+  .application-form__text {
+    display: inline-block;
   }
 }

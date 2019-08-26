@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Пинк</title>
-    <link href="css/normalize.css">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   </head>
@@ -70,48 +70,49 @@
         <h2 class="application-form__header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="application-form__text">Пожалуйста, заполните форму ниже:</span></h2>
         <form class="main-form">
           <div class="main-form__wrap-data main-form__wrap-data--user-data">
-            <fieldset class="main-form__fieldset main-form__fieldset--data">
+            <fieldset class="main-form__fieldset main-form__fieldset--data main-form__fieldset--user-data">
               <ul class="main-form__list main-form__list--data-list">
                 <li class="main-form__item main-form__item--data-item">
                   <label for="surname-id" class="main-form__data-label">Фамилия:</label>
-                  <input class="main-form__data-input main-form__data-input--surname" name="surname" id="surname-id" type="text" placeholder="Укажите фамилию *">
+                  <input class="main-form__data-input main-form__data-input--user-data" name="surname" id="surname-id" type="text" placeholder="Укажите фамилию *">
                 </li>
                 <li class="main-form__item main-form__item--data-item">
                   <label for="name-id" class="main-form__data-label">Имя:</label>
-                  <input class="main-form__data-input main-form__data-input--name" name="name" id="name-id" type="text" placeholder="Введите ваше имя *">
+                  <input class="main-form__data-input main-form__data-input--user-data" name="name" id="name-id" type="text" placeholder="Введите ваше имя *">
                 </li>
                 <li class="main-form__item main-form__item--data-item">
                   <label for="fathersname-id" class="main-form__data-label">Отчество:</label>
-                  <input class="main-form__data-input main-form__data-input--fathersname" name="fathersname" id="fathersname-id" type="text" placeholder="Ну и отчество тоже">
+                  <input class="main-form__data-input main-form__data-input--user-data" name="fathersname" id="fathersname-id" type="text" placeholder="Ну и отчество тоже">
                 </li>
               </ul>
             </fieldset>
           </div>
           <div class="main-form__wrap-filters main-form__wrap-filters--user-achievements">
-            <fieldset class="main-form__fieldset main-form__fieldset--filters">
+            <fieldset class="main-form__fieldset main-form__fieldset--filters main-form__fieldset--user-achievements">
               <legend class="main-form__title">Ваши безбашенные достижения в путешествии</legend>
               <ul class="main-form__list main-form__list--filter-list main-form__list--achievements-list">
-                <li class="main-form__item main-form__item--checkbox-item">
+
+                <li class="main-form__item main-form__item--checkbox-item main-form__item--selfieing">
                   <input class="visually-hidden main-form__chekbox-input" type="checkbox" name="selfieing" id="selfie-checkbox" checked>
                   <label for="selfie-checkbox" class="main-form__filter-label">Сделал селфи с акулой</label>
                 </li>
-                <li class="main-form__item main-form__item--checkbox-item">
+                <li class="main-form__item main-form__item--checkbox-item main-form__item--burning">
                   <input class="visually-hidden main-form__chekbox-input" type="checkbox" name="burning" id="burn-checkbox" checked>
                   <label for="burn-checkbox" class="main-form__filter-label">Обгорел на пляже</label>
                 </li>
-                <li class="main-form__item main-form__item--checkbox-item">
+                <li class="main-form__item main-form__item--checkbox-item main-form__item--chuck-spotting">
                   <input class="visually-hidden main-form__chekbox-input" type="checkbox" name="chuck-spotting" id="chuck-checkbox">
                   <label for="chuck-checkbox" class="main-form__filter-label">Видел Чака Норриса</label>
                 </li>
-                <li class="main-form__item main-form__item--checkbox-item">
+                <li class="main-form__item main-form__item--checkbox-item main-form__item--shopping">
                   <input class="visually-hidden main-form__chekbox-input" type="checkbox" name="shopping" id="souveniers-checkbox">
                   <label for="souveniers-checkbox" class="main-form__filter-label">Накупил сувениров</label>
                 </li>
-                <li class="main-form__item main-form__item--checkbox-item">
+                <li class="main-form__item main-form__item--checkbox-item main-form__item--tower-holding">
                   <input class="visually-hidden main-form__chekbox-input" type="checkbox" name="tower-holding" id="tower-checkbox" checked>
                   <label for="tower-checkbox" class="main-form__filter-label">Удержал башню</label>
                 </li>
-                <li class="main-form__item main-form__item--checkbox-item">
+                <li class="main-form__item main-form__item--checkbox-item main-form__item--hotel-destroing">
                   <input class="visually-hidden main-form__chekbox-input" type="checkbox" name="hotel-destroing" id="hotel-checkbox">
                   <label for="hotel-checkbox" class="main-form__filter-label">Разгромил отель</label>
                 </li>
@@ -136,7 +137,7 @@
           <div class="main-form__wrap-filters main-form__wrap-filters--user-application">
             <fieldset class="main-form__fieldset main-form__fieldset--filters">
               <legend class="main-form__title">С каким приложением путешествовали?</legend>
-              <ul class="main-form__list main-form__list--filter-list">
+              <ul class="main-form__list main-form__list--filter-list main-form__list--application">
                 <li class="main-form__item main-form__item--radio-item">
                   <input class="visually-hidden main-form__radio-input" type="radio" name="application" id="ios-radio" checked>
                   <label for="ios-radio" class="main-form__filter-label">Pink для iOS</label>

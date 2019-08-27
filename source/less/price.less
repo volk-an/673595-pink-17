@@ -7,6 +7,7 @@
   background-repeat: no-repeat;
   background-position: 0 -45px;
 }
+
 .price__container {
   display: flex;
   justify-content: center;
@@ -15,6 +16,7 @@
   margin: 0 auto;
   overflow: hidden;
 }
+
 .price__table {
   width: 1104px;
   height: 280px;
@@ -24,6 +26,7 @@
 
   border-collapse: collapse;
 }
+
 .price__header-cell {
   position: relative;
 
@@ -34,12 +37,13 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
-  font-family: "Open Sans";
+  font-family: @main-font;
   color: #ffffff;
   text-transform: uppercase;
 
   background-color: #283645;
   border: 2px solid #e5e5e5;
+
   &--hit::before {
     content: "";
     position: absolute;
@@ -53,6 +57,7 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
   &--hit::after {
     content: "хит";
     position: absolute;
@@ -72,11 +77,13 @@
     transform: rotate(-45deg);
   }
 }
+
 .price__option-value {
   position: relative;
 
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
+
   &--yes::after {
     content: "";
     position: absolute;
@@ -91,6 +98,7 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
   &--no::after {
     content: "";
     position: absolute;
@@ -106,6 +114,7 @@
     background-position: center;
   }
 }
+
 .price__price-value {
   display: block;
 
@@ -140,15 +149,18 @@
     background-position: 0 0;
     background-size: cover;
   }
+
   .price__container {
     width: 100%;
     max-width: 620px;
   }
+
   .price__table {
     width: 618px;
     height: 220px;
     margin-top: 95px;
   }
+
   .price__header-cell {
     &--hit::before {
       content: "";
@@ -163,6 +175,7 @@
       background-repeat: no-repeat;
       background-position: center;
     }
+
     &--hit::after {
       content: "хит";
       position: absolute;
@@ -182,14 +195,17 @@
       transform: rotate(-45deg);
     }
   }
+
   .price__option-title {
     display: table-cell;
   }
+
   .price__option-value {
     position: relative;
 
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
+
     &--yes::after {
       content: "";
       position: absolute;
@@ -204,6 +220,7 @@
       background-repeat: no-repeat;
       background-position: center;
     }
+
     &--no::after {
       content: "";
       position: absolute;
@@ -219,6 +236,7 @@
       background-position: center;
     }
   }
+
   .price__option-name {
     display: none;
   }
@@ -230,20 +248,24 @@
 
     background-size: cover;
   }
+
   .price__container {
     width: 100%;
     max-width: 940px;
   }
+
   .price__table {
     width: 940px;
     height: 280px;
     margin-top: 152px;
   }
+
   .price__price-value {
     font-weight: 300;
     font-size: 24px;
     line-height: 30px;
   }
+
   .price__header-cell {
     position: relative;
 
@@ -254,6 +276,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 30px;
+
     &--hit::before {
       content: "";
       position: absolute;
@@ -267,6 +290,7 @@
       background-repeat: no-repeat;
       background-position: center;
     }
+
     &--hit::after {
       content: "хит";
       position: absolute;

@@ -1,13 +1,23 @@
 .download-app {
+  width: 100%;
+  margin: 0 auto;
+
+  background-color: #283645;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center -65px;
+}
+
+.download-app__container {
   position: relative;
 
   width: 100%;
   max-width: 280px;
   min-height: 220px;
+  margin: 0 auto;
   margin-top: 396px;
   padding: 28px 20px 22px;
 
-  background-color: #1d2631;
 
   &::after {
     content: "";
@@ -56,6 +66,16 @@
   background-color: none;
   border: 3px solid #ffffff;
   border-radius: 50px;
+
+  &:hover {
+    color: @pink;
+
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: rgba(240, 40, 86, 0.3);
+  }
 }
 
 .download-app__list {
@@ -108,38 +128,43 @@
 
 @media (min-width: @tablet-width) {
   .download-app {
+    background: none;
+  }
+
+  .download-app__container {
     position: relative;
 
     width: 100%;
     max-width: 620px;
-    min-height: 545px;
+    min-height: 543px;
     margin-top: 75px;
     padding: 0 20px;
 
     background: none;
     background-image: url("../img/iphone-hand-tablet@1x.png");
     background-repeat: no-repeat;
-    background-position: top  right;
-  }
+    background-position: -20px 0;
 
-  .download-app::after {
-    content: "";
-    position: absolute;
+    &::after {
+      content: "";
+      position: absolute;
 
-    width: 0;
-    height: 0;
+      width: 0;
+      height: 0;
+    }
   }
 
   .download-app__header {
     position: relative;
 
     width: 186px;
-    min-height: 128px;
+    min-height: 132px;
     margin: 0;
-    padding: 25px 56px;
+    padding: 20px 56px 26px;
 
     font-weight: 300;
     font-size: 40px;
+    line-height: 45px;
     font-family: @main-font;
     text-align: center;
     color: #ffffff;
@@ -173,7 +198,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .download-app {
+  .download-app__container {
     position: relative;
 
     width: 100%;
@@ -187,14 +212,14 @@
     background-image: url("../img/iphone-hand-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: 15px 0;
-  }
 
-  .download-app::after {
-    content: "";
-    position: absolute;
+    &::after {
+      content: "";
+      position: absolute;
 
-    width: 0;
-    height: 0;
+      width: 0;
+      height: 0;
+    }
   }
 
   .download-app__header {

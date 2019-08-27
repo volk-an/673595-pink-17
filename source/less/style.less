@@ -2,9 +2,11 @@
 @main-font: "Open Sans", Arial, Sans-serif;
 @tablet-width: 660px;
 @desktop-width: 960px;
+@mobile-tablet-only: 960px;
+@navi: #283645;
 
 body {
-  max-width: 320px;
+  width: 100%;
   margin: 0 auto;
 
   font-weight: 400;
@@ -15,19 +17,20 @@ body {
 
 @media (min-width: @tablet-width) {
   body {
-    max-width: 660px;
+    width: 100%;
     margin: 0 auto;
+
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   body {
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
-  }
 
-  .site-body__container {
     background-color: #2d3d4e;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat;
@@ -66,3 +69,6 @@ img {
 @import "researching.less";
 @import "editor.less";
 @import "application-form.less";
+@import "price.less";
+@import "contacts.less";
+@import "main-form.less";

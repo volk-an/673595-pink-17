@@ -1,21 +1,30 @@
 .intro {
-  position: relative;
-
-  max-width: 260px;
-  min-height: 963px;
-  margin: 0;
-  padding: 40px 30px;
-  padding-bottom: 0;
+  width: 100%;
 
   background-color: #ffffff;
   background-image: url("../img/Shape_grey.png");
   background-repeat: no-repeat;
   background-position: bottom;
+}
+
+.intro__container {
+  position: relative;
+
+  max-width: 260px;
+  min-height: 930px;
+  margin: 0 auto;
+  padding: 40px 0;
+  padding-bottom: 0;
+
+  /*background-color: #ffffff;
+  background-image: url("../img/Shape_grey.png");
+  background-repeat: no-repeat;
+  background-position: bottom;*/
 
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -30px;
     left: 50%;
 
     width: 158px;
@@ -26,6 +35,12 @@
     background-repeat: no-repeat;
     background-position: top;
   }
+}
+
+.intro__wrap {
+  width: 100%;
+  max-width: 761px;
+  margin: 0 auto;
 }
 
 .intro__text {
@@ -79,6 +94,10 @@
 
 @media (min-width: @tablet-width) {
   .intro {
+    background-position: -90px 190px;
+  }
+
+  .intro__container {
     position: relative;
 
     width: 100%;
@@ -88,7 +107,7 @@
     padding: 0;
 
     background: none;
-    background-color: #ffffff;
+    /*  background-color: #ffffff;*/
 
     &::after {
       content: "";
@@ -100,7 +119,8 @@
   }
 
   .intro__wrap {
-    width: 620px;
+    width: 100%;
+    max-width: 620px;
     min-height: 244px;
     margin: 0 auto;
     padding: 0;
@@ -115,7 +135,8 @@
   }
 
   .intro__text--up {
-    width: 610px;
+    width: 100%;
+    max-width: 610px;
     padding: 50px 5px 5px;
   }
 
@@ -134,10 +155,10 @@
     margin: 0;
     padding: 0;
 
-    background-image: url("../img/Shape_grey.png");
+    /*background-image: url("../img/Shape_grey.png");
     background-repeat: no-repeat;
     background-size: cover;
-    /*background-position: 0 -54px;*/
+    background-position: 0 -54px;*/
 
     &::after {
       content: "";
@@ -196,13 +217,11 @@
 
 @media (min-width: @desktop-width) {
   .intro {
-    max-width: 1200px;
-
     background-color: #ffffff;
     background-image: url("../img/Shape_grey.png");
     background-repeat: no-repeat;
-    background-position: 0 324px;
-    background-size: contain;
+    background-position: 0 300px;
+    background-size: cover;
   }
 
   .intro__container {
@@ -212,7 +231,6 @@
     max-width: 940px;
     min-height: 950px;
     margin: 0 auto;
-
 
     &::after {
       content: "";
@@ -224,10 +242,13 @@
   }
 
   .intro__wrap {
-    width: 940px;
+    width: 100%;
+    max-width: 770px;
     min-height: 324px;
     margin: 0 auto;
     padding: 0;
+
+    text-align: center;
   }
 
   .intro__text {
@@ -236,18 +257,20 @@
 
     font-weight: 300;
     font-size: 50px;
-    line-height: 56px;
+    line-height: 52px;
   }
 
   .intro__text--up {
-    width: 760px;
-    padding: 70px 95px 2px;
+    width: 100%;
+    max-width: 760px;
+    padding: 70px 10px 10px;
   }
 
   .intro__text--down {
-    width: 480px;
+    width: 100%;
+    max-width: 470px;
     margin: 0 auto;
-    padding: 3px 37px;
+    padding: 5px;
   }
 
   .intro__list-wrap {
@@ -295,6 +318,14 @@
     background-image: url("../img/iphone-screen-1-desktop@1x.png");
     background-repeat: no-repeat;
     background-position: top center;
+  }
+
+  .intro__advantages-item:nth-child(2) {
+    background-image: url("../img/iphone-screen-2-desktop@1x.png");
+  }
+
+  .intro__advantages-item:nth-child(3) {
+    background-image: url("../img/iphone-screen-3-desktop@1x.png");
   }
 
   .intro__advantages-title {

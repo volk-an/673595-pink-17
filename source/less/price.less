@@ -1,6 +1,5 @@
 .price {
   width: 100%;
-  min-height: 475px;
 
   background-color: #ffffff;
   background-image: url("../img/Shape_grey.png");
@@ -12,19 +11,19 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 320px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .price__table {
   width: 1104px;
   height: 280px;
   margin: 0 auto;
-  margin-top: 152px;
+  margin-top: 122px;
+  margin-bottom: 100px;
   overflow-x: hidden;
 
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .price__header-cell {
@@ -32,7 +31,7 @@
 
   width: 216px;
   height: 62px;
-  padding: 5px 30px;
+  padding: 18px 30px;
 
   font-weight: 700;
   font-size: 16px;
@@ -81,14 +80,17 @@
 .price__option-value {
   position: relative;
 
+  padding-right: 35px;
+  padding-left: 20px;
+
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
 
   &--yes::after {
     content: "";
     position: absolute;
-    top: 12px;
-    left: 200px;
+    top: 15px;
+    left: 225px;
 
     width: 35px;
     height: 25px;
@@ -102,8 +104,8 @@
   &--no::after {
     content: "";
     position: absolute;
-    top: 10px;
-    left: 200px;
+    top: 14px;
+    left: 230px;
 
     width: 27px;
     height: 28px;
@@ -119,7 +121,7 @@
   display: block;
 
   font-weight: 300;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 30px;
   color: #ffffff;
   text-transform: uppercase;
@@ -159,9 +161,22 @@
     width: 618px;
     height: 220px;
     margin-top: 95px;
+    margin-bottom: 70px;
+    overflow-x: visible;
+
+    table-layout: auto;
+  }
+
+  .price__option-title {
+    display: table-cell;
+    width: 132px;
+    padding: 6px 10px;
   }
 
   .price__header-cell {
+    width: 142px;
+    padding: 8px 5px;
+
     &--hit::before {
       content: "";
       position: absolute;
@@ -196,8 +211,8 @@
     }
   }
 
-  .price__option-title {
-    display: table-cell;
+  .price__price-value {
+    font-size: 18px;
   }
 
   .price__option-value {

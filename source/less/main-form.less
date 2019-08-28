@@ -67,7 +67,7 @@
   display: block;
   min-height: 36px;
   margin: 0;
-  padding: 3px;
+  padding: 3px 20px;
 
   font-size: 14px;
   line-height: 18px;
@@ -169,8 +169,6 @@
   border: 2px solid @pink;
 }
 
-
-
 .main-form__radio-input:checked + .main-form__filter-label::after {
   content: "";
   position: absolute;
@@ -271,20 +269,26 @@
   .main-form__fieldset--filters {
     width: 616px;
     margin: 0 auto;
-    margin-top: 23px;
-    margin-bottom: 50px;
+    margin-top: 30px;
 
     border: 2px solid @gray;
   }
 
+  .main-form__fieldset--user-achievements {
+    margin-top: 60px;
+  }
+
   .main-form__fieldset--contacts {
     width: 616px;
+    margin: 0;
+    margin-top: 58px;
 
     border: 2px solid @gray;
   }
 
   .main-form__fieldset--message {
     width: 616px;
+    margin-top: 55px;
 
     border: 2px solid @gray;
   }
@@ -318,7 +322,7 @@
   .main-form__title {
     min-height: 14px;
     margin-top: 0;
-    padding: 10px;
+    padding: 1px;
 
     font-size: 14px;
     line-height: 14px;
@@ -348,15 +352,19 @@
     padding: 0 58px;
   }
 
+  .main-form__list--application {
+    margin-top: 10px;
+  }
+
   .main-form__list--contacts-list {
     width: 500px;
     margin: 0 auto;
+    margin-top: 35px;
     padding: 0;
-    padding-bottom: 15px;
   }
 
   .main-form__list--achievements-list {
-    margin-top: 35px;
+    margin-top: 45px;
     margin-bottom: 10px;
   }
 
@@ -383,8 +391,8 @@
 
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
-    margin-bottom: 5px;
+    margin: 0;
+    margin-bottom: 20px;
 
     &::after {
       content: "";
@@ -434,7 +442,7 @@
   }
 
   .main-form__data-label--contacts {
-    margin-top: 10px;
+    margin-top: 0;
     margin-bottom: 0;
     margin-left: 20px;
   }
@@ -460,14 +468,14 @@
     width: 456px;
     min-height: 150px;
     margin: 0 auto;
-    margin-top: 25px;
+    margin-top: 38px;
     margin-bottom: 50px;
     padding: 20px;
   }
 
   .main-form__button {
     width: 300px;
-    min-height: 65px;
+    min-height: 63px;
     margin: 0;
     padding: 10px 20px;
   }
@@ -498,11 +506,7 @@
   }
 
   .main-form__wrap-filters--user-application {
-    width: 435px;
-  }
-
-  .main-form__wrap-filters--user-application {
-    width: 440px;
+    width: 436px;
   }
 
   .main-form__fieldset--user-data {
@@ -532,19 +536,23 @@
   }
 
   .main-form__fieldset--message {
-    width: 940px;
-    margin-top: 45px;
+    width: 936px;
+    margin-top: 58px;
     margin-bottom: 50px;
   }
 
   .main-form__fieldset--user-achievements {
     width: 940px;
-    margin-top: 50px;
+    margin-top: 56px;
   }
 
   .main-form__wrap {
     width: 940px;
-    margin: 15px 0;
+    margin: 14px 0 0;
+  }
+
+  .main-form__title--contacts {
+    padding: 8px;
   }
 
   .main-form__list {
@@ -566,6 +574,7 @@
   }
 
   .main-form__list--contacts-list {
+    flex-flow: wrap;
     flex-direction: row;
     justify-content: space-between;
     width: 820px;
@@ -575,6 +584,7 @@
 
   .main-form__list--application {
     width: 360px;
+    margin-top: 14px;
     padding-left: 75px;
   }
 
@@ -583,8 +593,8 @@
     flex-wrap: wrap;
     width: 820px;
     margin: 0 auto;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    margin-top: 43px;
+    margin-bottom: 15px;
   }
 
   .main-form__data-input--user-data {
@@ -605,11 +615,11 @@
     flex-direction: row;
     align-items: flex-start;
     margin: 0;
-    margin-bottom: 56px;
+    margin-bottom: 52px;
   }
 
   .main-form__item--radio-item {
-    margin-top: 36px;
+    margin-top: 35px;
   }
 
   .main-form__item--contacs-item {
@@ -618,7 +628,7 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-    margin-top: 20px;
+    margin-top: 25px;
   }
 
   .main-form__item--phone::after {
@@ -634,8 +644,25 @@
   }
 
   .main-form__item--checkbox-item {
+    width: 30%;
     margin-top: 0;
     margin-bottom: 42px;
+  }
+
+  .main-form__item--checkbox-item:nth-child(7n+1) {
+    width: 32%;
+  }
+
+  .main-form__item--checkbox-item:nth-child(7n+2) {
+    width: 32%;
+  }
+
+  .main-form__item--checkbox-item:nth-child(7n+5) {
+    width: 26%;
+  }
+
+  .main-form__item--checkbox-item:nth-child(7n+6) {
+    width: 26%;
   }
 
   .main-form__item--selfieing {
@@ -644,7 +671,6 @@
 
   .main-form__item--burning {
     order: 4;
-    width: 259px;
   }
 
   .main-form__item--chuck-spotting {
@@ -664,7 +690,8 @@
   }
 
   .main-form__data-label--contacts {
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
   }
 
   .main-form__data-input--phone-number,
@@ -678,6 +705,7 @@
   .main-form__data-input--message {
     width: 776px;
     min-height: 84px;
+    margin-top: 36px;
     margin-bottom: 45px;
   }
 

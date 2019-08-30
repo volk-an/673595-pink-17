@@ -40,8 +40,44 @@
   height: 60px;
   margin: 0;
   padding: 0;
+
+  opacity: 0.3;
+
+  &:hover path {
+    opacity: 0.3;
+
+    fill: @navi;
+  }
+
+  &:hover rect {
+    opacity: 0.3;
+
+    fill: @navi;
+  }
+
+  &:active path {
+    opacity: 0.5;
+
+    fill: @navi;
+  }
+
+  &:active rect {
+    opacity: 0.5;
+
+    fill: @navi;
+  }
 }
 
+.editor__tool-label--active {
+  opacity: 1;
+}
+
+
+
+.editor__tool-label--active path,
+.editor__tool-label--active rect {
+  fill: @pink;
+}
 .editor__input {
   display: none;
 }
@@ -236,6 +272,13 @@
     margin: 0;
     padding: 0;
     padding-top: 8px;
+
+    opacity: 1;
+  }
+
+  .editor__tool-label path,
+  .editor__tool-label rect {
+    fill: @pink;
   }
 
   .editor__input {

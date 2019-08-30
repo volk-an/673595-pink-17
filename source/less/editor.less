@@ -80,8 +80,10 @@
 }
 .editor__input {
   display: none;
-}
 
+  pointer-events: relative;
+}
+/*
 .editor__input--active {
   position: absolute;
   top: 96px;
@@ -95,9 +97,21 @@
   background-color: #000000;
   outline: none;
 
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+          appearance: none;
 }
 
+.editor__input--active::-ms-track {
+  width: 100%;
+
+  color: transparent;
+
+  background: transparent; Скрывает слайдер, чтобы можно было добавить собственные стили.
+  border-color: transparent;
+  cursor: pointer;
+}
 .editor__input::-webkit-slider-thumb {
   width: 15px;
   height: 15px;
@@ -106,10 +120,43 @@
   border-radius: 50%;
   cursor: pointer;
 
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .editor__input::-webkit-slider-thumb:active {
+  background-color: @pink;
+}
+
+editor__input::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid @pink;
+  border-radius: 50%;
+  cursor: pointer;
+
+  -moz-appearance: none;
+       appearance: none;
+}
+
+.editor__input::-moz-range-thumb:active {
+  background-color: @pink;
+}
+
+.editor__input::-ms-thumb {
+  content: "";
+  position: absolute;
+
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid @pink;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.editor__input::-ms-thumb:active {
   background-color: @pink;
 }
 /*.editor__tool-button {
@@ -213,6 +260,7 @@
   }
 }
 
+
 @media (min-width: @tablet-width) {
   .editor__container {
     display: flex;
@@ -311,6 +359,7 @@
     margin-top: 24px;
   }
 }
+
 
 @media (min-width: @desktop-width) {
   .editor {

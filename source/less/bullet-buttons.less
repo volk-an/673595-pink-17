@@ -1,0 +1,36 @@
+.bullet-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60px;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.bullet-buttons__bullet {
+  width: 6px;
+  height: 6px;
+
+  background-color: #283645;
+  border-radius: 100%;
+  opacity: 0.6;
+
+  &--current {
+    background-color: #ffffff;
+    border: 3px solid #283645;
+    opacity: 1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .bullet-buttons--price {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .bullet-buttons {
+    display: none;
+  }
+}

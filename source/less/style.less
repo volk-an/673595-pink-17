@@ -8,6 +8,17 @@
 @retina-dpi: 144dpi;
 @retina-dppx: 1.5dppx;
 
+@font-face {
+  font-family: @main-font;
+
+  src: url("../fonts/opensans.woff2") format("woff2"),
+       url("../fonts/opensans.woff") format("woff"),
+       url("../fonts/opensansbold.woff2") format("woff2"),
+       url("../fonts/opensansbold.woff") format("woff"),
+       url("../fonts/opensanslight.woff2") format("woff2"),
+       url("../fonts/opensanslight.woff") format("woff");
+}
+
 body {
   width: 100%;
   margin: 0 auto;
@@ -75,3 +86,4 @@ img {
 @import "price.less";
 @import "contacts.less";
 @import "main-form.less";
+@import "bullet-buttons.less";

@@ -72,12 +72,11 @@
   opacity: 1;
 }
 
-
-
 .editor__tool-label--active path,
 .editor__tool-label--active rect {
   fill: @pink;
 }
+
 .editor__input {
   display: none;
 }
@@ -110,8 +109,8 @@
 }
 
 ::-moz-range-thumb {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
 
   border: 2px solid @pink;
   border-radius: 50%;
@@ -126,6 +125,12 @@
 
 ::-moz-range-thumb:active {
   background-color: @pink;
+}
+
+
+.editor__input::-ms-fill-lower,
+.editor__input::-ms-fill-upper {
+  background: transparent;
 }
 
 /*.editor__tool-button {

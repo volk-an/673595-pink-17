@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Пинк</title>
     <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+
   </head>
   <body class="site-body">
     <!--<div class="site-body__container">-->
@@ -108,16 +108,16 @@
         <section class="download-app">
           <div class="download-app__container">
             <h2 class="download-app__header">Взгляните на жизнь иначе!</h2>
-            <a class="download-app__button" href="#" aria-label="iTunes">Скачать приложение</a>
+            <a class="download-app__button" href="https://www.apple.com/itunes/" aria-label="iTunes">Скачать приложение</a>
             <ul class="download-app__list">
               <li class="download-app-item">
-                <a class="download-app__link download-app__link--apple"></a>
+                <a class="download-app__link download-app__link--apple" href="https://www.apple.com/itunes/" aria-label="iTunes"></a>
               </li>
               <li class="download-app-item">
-                <a class="download-app__link download-app__link--android"></a>
+                <a class="download-app__link download-app__link--android" href="https://play.google.com" aria-label="Play Market"></a>
               </li>
               <li class="download-app-item">
-                <a class="download-app__link download-app__link--windows"></a>
+                <a class="download-app__link download-app__link--windows" href="https://www.microsoft.com/ru-ru/store/b/home" aria-label="Windows Store"></a>
               </li>
             </ul>
             <p class="download-app__info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -162,42 +162,56 @@
           </article>
           <section class="review">
             <div class="review__container">
-              <h2 class="visually-hidden">Отзывы о приложении Пинк</h2>
-              <p class="review__name">Николай Петров</p>
-              <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-              <p class="review__charachter">25 лет, водитель трамвая</p>
+              <div class="review__slide-1">
+                <h2 class="visually-hidden">Отзывы о приложении Пинк</h2>
+                <p class="review__name">Николай Петров</p>
+                <p class="review__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                <p class="review__charachter">25 лет, водитель трамвая</p>
+              </div>
+              <div class="bullet-buttons">
+                <div class="bullet-buttons__bullet bullet-buttons__bullet--current"></div>
+                <div class="bullet-buttons__bullet"></div>
+                <div class="bullet-buttons__bullet"></div>
+              </div>
             </div>
         </section>
         <section class="price">
           <h2 class="visually-hidden">Прайс Пинк</h2>
           <div class="price__container">
-            <table class="price__table">
-              <tr class="ptice__header-row">
-                <th class="visually-hidden price__option-title">Тариф</th>
-                <th class="price__cell price__header-cell">База<span class="price__price-value">1,99 USD</span></th>
-                <th class="price__cell price__header-cell price__header-cell--hit">Стандарт<span class="price__price-value">3,99 USD</span></th>
-                <th class="price__cell price__header-cell">Анлим<span class="price__price-value">9,99 USD</span></th>
-              </tr>
-              <tr class="ptice__option">
-                <th class="price__cell price__option-title">Розовый фильтр</th>
-                <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Розовый фильтр</span></td>
-                <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Розовый фильтр</span></td>
-                <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Розовый фильтр</span></td>
-              </tr>
-              <tr class="ptice__option">
-                <th class="price__cell price__option-title">Смайлики</th>
-                <td class="price__cell price__option-value price__option-value--no"><span class="price__option-name">Смайлики</span></td>
-                <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Смайлики</span></td>
-                <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Смайлики</span></td>
-              </tr>
-              <tr class="ptice__option">
-                <th class="price__cell price__option-title">Комментарии</th>
-                <td class="price__cell price__option-value price__option-value--no"><span class="price__option-name">Комментарии</span></td>
-                <td class="price__cell price__option-value price__option-value--no"><span class="price__option-name">Комментарии</span></td>
-                <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Комментарии</span></td>
-              </tr>
-            </table>
-          <div>
+            <div class="price__table-container">
+              <table class="price__table">
+                <tr class="ptice__header-row">
+                  <th class="visually-hidden price__option-title">Тариф</th>
+                  <th class="price__cell price__header-cell">База<span class="price__price-value">1,99 USD</span></th>
+                  <th class="price__cell price__header-cell price__header-cell--hit">Стандарт<span class="price__price-value">3,99 USD</span></th>
+                  <th class="price__cell price__header-cell">Анлим<span class="price__price-value">9,99 USD</span></th>
+                </tr>
+                <tr class="ptice__option">
+                  <th class="price__cell price__option-title">Розовый фильтр</th>
+                  <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Розовый фильтр</span></td>
+                  <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Розовый фильтр</span></td>
+                  <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Розовый фильтр</span></td>
+                </tr>
+                <tr class="ptice__option">
+                  <th class="price__cell price__option-title">Смайлики</th>
+                  <td class="price__cell price__option-value price__option-value--no"><span class="price__option-name">Смайлики</span></td>
+                  <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Смайлики</span></td>
+                  <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Смайлики</span></td>
+                </tr>
+                <tr class="ptice__option">
+                  <th class="price__cell price__option-title">Комментарии</th>
+                  <td class="price__cell price__option-value price__option-value--no"><span class="price__option-name">Комментарии</span></td>
+                  <td class="price__cell price__option-value price__option-value--no"><span class="price__option-name">Комментарии</span></td>
+                  <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Комментарии</span></td>
+                </tr>
+              </table>
+            </div>
+            <div class="bullet-buttons bullet-buttons--price">
+              <div class="bullet-buttons__bullet"></div>
+              <div class="bullet-buttons__bullet bullet-buttons__bullet--current"></div>
+              <div class="bullet-buttons__bullet"></div>
+            </div>
+          </div>
         </section>
         <section class="contacts">
           <div class="contacts__container">

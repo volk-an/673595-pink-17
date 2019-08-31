@@ -110,17 +110,17 @@
       <section class="application-form">
         <div class="application-form__container">
         <h2 class="application-form__header">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!<span class="application-form__text">Пожалуйста, заполните форму ниже:</span></h2>
-        <form class="main-form">
+        <form class="main-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="main-form__wrap-data main-form__wrap-data--user-data">
             <fieldset class="main-form__fieldset main-form__fieldset--data main-form__fieldset--user-data">
               <ul class="main-form__list main-form__list--data-list">
                 <li class="main-form__item main-form__item--data-item">
                   <label for="surname-id" class="main-form__data-label">Фамилия:</label>
-                  <input class="main-form__data-input main-form__data-input--user-data" name="surname" id="surname-id" type="text" placeholder="Укажите фамилию *">
+                  <input class="main-form__data-input main-form__data-input--user-data" name="surname" id="surname-id" type="text" placeholder="Укажите фамилию *" required>
                 </li>
                 <li class="main-form__item main-form__item--data-item">
                   <label for="name-id" class="main-form__data-label">Имя:</label>
-                  <input class="main-form__data-input main-form__data-input--user-data" name="name" id="name-id" type="text" placeholder="Введите ваше имя *">
+                  <input class="main-form__data-input main-form__data-input--user-data" name="name" id="name-id" type="text" placeholder="Введите ваше имя *" required>
                 </li>
                 <li class="main-form__item main-form__item--data-item">
                   <label for="fathersname-id" class="main-form__data-label">Отчество:</label>
@@ -167,11 +167,11 @@
               <ul class="main-form__list main-form__list--data-list main-form__list--contacts-list">
                 <li class="main-form__item main-form__item--data-item main-form__item--contacs-item main-form__item--phone">
                   <label for="phone-number-id" class="main-form__data-label main-form__data-label--contacts">Номер телефона:</label>
-                  <input class="main-form__data-input main-form__data-input--phone-number" name="phone-number" id="phone-number-id" type="text" placeholder="Номер, пожалуйста">
+                  <input class="main-form__data-input main-form__data-input--phone-number" name="phone-number" id="phone-number-id" type="tel" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="Номер, пожалуйста">
                 </li>
                 <li class="main-form__item main-form__item--data-item main-form__item--contacs-item main-form__item--email">
                   <label for="email-id" class="main-form__data-label main-form__data-label--contacts">адрес почты</label>
-                  <input class="main-form__data-input main-form__data-input--email" name="email" id="email-id" type="text" placeholder="Введите почту *">
+                  <input class="main-form__data-input main-form__data-input--email" name="email" id="email-id" type="email" placeholder="Введите почту *" required>
                 </li>
               </ul>
             </fieldset>

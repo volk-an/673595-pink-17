@@ -36,8 +36,9 @@
 }
 
 .editor__tool-label {
+  position: relative;
+
   width: 50px;
-  height: 60px;
   margin: 0;
   padding: 0;
 
@@ -78,34 +79,35 @@
 }
 
 .editor__input {
-  display: none;
-}
-
-.editor__input--active {
   position: absolute;
   top: 96px;
   left: 40px;
 
+  display: none;
   display: block;
   width: 240px;
-  height: 2px;
+  height: 1px;
   margin: 0;
 
   background-color: #000000;
+  border: none;
   outline: none;
-
-  appearance: none;
+}
+.editor__input--active {
+  display: block;
 }
 
-.editor__input::-webkit-slider-thumb {
-  width: 15px;
-  height: 15px;
+.editor__runner {
+  position: absolute;
+  top: 90px;
+  left: 150px;
+
+  width: 10px;
+  height: 10px;
 
   border: 2px solid @pink;
   border-radius: 50%;
   cursor: pointer;
-
-  appearance: none;
 }
 
 ::-moz-range-thumb {
@@ -272,6 +274,7 @@
     width: 275px;
     height: 55px;
     margin: 0;
+    margin-bottom: 15px;
     padding: 0;
 
     border-bottom: 1px solid #dedfe1;
@@ -310,14 +313,17 @@
 
     display: block;
     width: 202px;
-    height: 2px;
+    height: 1px;
     margin: 0;
     padding: 0;
 
     background-color: #000000;
     outline: none;
+  }
 
-    appearance: none;
+  .editor__runner {
+    top: 14px;
+    left: 150px;
   }
 
   .editor__button {
@@ -326,7 +332,7 @@
   }
 
   .editor__button--send {
-    margin-top: 67px;
+    margin-top: 55px;
   }
 
   .editor__button--reset {

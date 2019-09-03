@@ -9,9 +9,19 @@
 
 .price__container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 42px;
+}
+
+.price__table-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .price__table {
@@ -19,11 +29,21 @@
   height: 280px;
   margin: 0 auto;
   margin-top: 122px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
   overflow-x: hidden;
 
   border-collapse: collapse;
   table-layout: fixed;
+
+  -ms-margin-left: -260px;
+}
+
+.ptice__header-row {
+  background-color: @navi;
+}
+
+.ptice__option {
+  background-color: #ffffff;
 }
 
 .price__header-cell {
@@ -39,8 +59,8 @@
   font-family: @main-font;
   color: #ffffff;
   text-transform: uppercase;
+  //  background-color: #283645;
 
-  background-color: #283645;
   border: 2px solid #e5e5e5;
 
   &--hit::before {
@@ -82,8 +102,8 @@
 
   padding-right: 35px;
   padding-left: 20px;
+  //background-color: #ffffff;
 
-  background-color: #ffffff;
   border: 2px solid #e5e5e5;
 
   &--yes::after {
@@ -139,9 +159,13 @@
   line-height: 30px;
   text-align: left;
   color: #283645;
+  //background-color: #ffffff;
 
-  background-color: #ffffff;
   border: 2px solid #e5e5e5;
+}
+
+.price__cell {
+  border: 2px solid @gray;
 }
 
 @media (min-width: @tablet-width) {
@@ -153,6 +177,10 @@
   }
 
   .price__container {
+    margin-bottom: 0;
+  }
+
+  .price__table-container {
     width: 100%;
     max-width: 620px;
   }
@@ -161,8 +189,7 @@
     width: 618px;
     height: 220px;
     margin-top: 95px;
-    margin-bottom: 70px;
-    overflow-x: visible;
+    margin-bottom: 0;
 
     table-layout: auto;
   }
@@ -218,9 +245,6 @@
   .price__option-value {
     position: relative;
 
-    background-color: #ffffff;
-    border: 2px solid #e5e5e5;
-
     &--yes::after {
       content: "";
       position: absolute;
@@ -265,6 +289,11 @@
   }
 
   .price__container {
+    width: 100%;
+    max-width: 940px;
+  }
+
+  .price__table-container {
     width: 100%;
     max-width: 940px;
   }

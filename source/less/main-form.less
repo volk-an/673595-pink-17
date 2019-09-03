@@ -65,8 +65,9 @@
 
 .main-form__title {
   display: block;
+  width: auto;
   min-height: 36px;
-  margin: 0;
+  margin: 0 auto;
   padding: 3px 20px;
 
   font-size: 14px;
@@ -255,6 +256,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-form__fieldset {
+    position: relative;
+  }
+
   .main-form__fieldset--user-data {
     display: flex;
     flex-direction: column;
@@ -269,26 +274,27 @@
   .main-form__fieldset--filters {
     width: 616px;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 38px;
 
     border: 2px solid @gray;
   }
 
   .main-form__fieldset--user-achievements {
-    margin-top: 60px;
+    margin-top: 64px;
   }
 
   .main-form__fieldset--contacts {
     width: 616px;
     margin: 0;
-    margin-top: 58px;
+    margin-top: 65px;
 
     border: 2px solid @gray;
   }
 
   .main-form__fieldset--message {
     width: 616px;
-    margin-top: 55px;
+    margin-top: 68px;
+    margin-bottom: 0;
 
     border: 2px solid @gray;
   }
@@ -320,19 +326,38 @@
   }
 
   .main-form__title {
+    position: absolute;
+    top: -10px;
+
+    display: block;
     min-height: 14px;
     margin-top: 0;
-    padding: 1px;
 
     font-size: 14px;
     line-height: 14px;
     text-align: center;
     color: @pink;
     text-transform: uppercase;
+
+    background-color: #ffffff;
+  }
+
+  .main-form__title--user-achievements {
+    left: 90px;
+
+    padding: 5px 30px;
   }
 
   .main-form__title--contacts {
-    display: block;
+    left: 190px;
+  }
+
+  .main-form__title--application {
+    left: 130px;
+  }
+
+  .main-form__title--message {
+    left: 200px;
   }
 
   .main-form__list {
@@ -349,23 +374,24 @@
     width: 496px;
     margin: 0;
     margin-bottom: 50px;
-    padding: 0 58px;
+    padding: 0 60px;
   }
 
   .main-form__list--application {
-    margin-top: 10px;
+    margin-top: 50px;
+    margin-bottom: 10px;
   }
 
   .main-form__list--contacts-list {
     width: 500px;
     margin: 0 auto;
-    margin-top: 35px;
+    margin-top: 45px;
     padding: 0;
   }
 
   .main-form__list--achievements-list {
-    margin-top: 45px;
-    margin-bottom: 10px;
+    margin-top: 55px;
+    margin-bottom: 0;
   }
 
   .main-form__item {
@@ -383,7 +409,8 @@
   }
 
   .main-form__item--radio-item {
-    margin-top: 36px;
+    margin-top: 0;
+    margin-bottom: 32px;
   }
 
   .main-form__item--contacs-item {
@@ -392,16 +419,16 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
 
     &::after {
       content: "";
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 2px;
+      right: 2px;
 
-      width: 63px;
-      height: 63px;
+      width: 59px;
+      height: 59px;
 
       background-color: @gray;
     }
@@ -436,9 +463,13 @@
 
     display: block;
     min-height: 36px;
-    padding-left: 60px;
+    padding: 5px 60px;
 
     cursor: pointer;
+  }
+
+  .main-form__filter-label--checkbox {
+    min-height: 30px;
   }
 
   .main-form__data-label--contacts {
@@ -460,17 +491,19 @@
   .main-form__data-input--email {
     flex-grow: 0;
     order: -1;
-    width: 418px;
+    width: 456px;
     margin-top: 0;
+    margin-bottom: 10px;
   }
 
   .main-form__data-input--message {
     width: 456px;
-    min-height: 150px;
+    min-height: 158px;
     margin: 0 auto;
-    margin-top: 38px;
-    margin-bottom: 50px;
-    padding: 20px;
+    margin-top: 45px;
+    margin-bottom: 48px;
+    padding: 16px;
+    overflow: hidden;
   }
 
   .main-form__button {
@@ -482,7 +515,11 @@
 
   .main-form__info {
     margin: 0;
-    padding: 10px 0 10px;
+    padding: 24px 0 10px;
+
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
   }
 
   .main-form__wrap {
@@ -491,7 +528,7 @@
     justify-content: space-between;
     order: 6;
     width: 620px;
-    margin: 43px 0;
+    margin: 68px 0 50px;
   }
 }
 
@@ -707,6 +744,7 @@
     min-height: 84px;
     margin-top: 36px;
     margin-bottom: 45px;
+    overflow: hidden;
   }
 
   .main-form__info-text--hidden {

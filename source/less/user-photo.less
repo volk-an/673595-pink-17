@@ -45,9 +45,32 @@
 }
 
 .user-photo__item--panorama {
+  position: relative;
+
   width: 320px;
   margin: 0 auto;
   margin-bottom: 21px;
+
+  &::after {
+    content: "панорама дня";
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+    width: 140px;
+    height: 28px;
+    padding: 4px 0;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    font-family: @main-font;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    background-color: @pink;
+  }
 }
 
 .user-photo__link {
@@ -186,6 +209,10 @@
     width: 100%;
     max-width: 660px;
     margin-bottom: 50px;
+
+    &::after {
+      top: 57px;
+    }
   }
 
   .user-photo__link {
@@ -339,6 +366,11 @@
     width: 100%;
     max-width: 1200px;
     min-height: 602px;
+
+    &::after {
+      top: 50px;
+      right: 30px;
+    }
   }
 
   .user-photo__image--panorama {

@@ -36,35 +36,83 @@
 }
 
 .editor__tool-label {
+  position: relative;
+
   width: 50px;
-  height: 60px;
   margin: 0;
   padding: 0;
+
+  opacity: 0.3;
+
+  &:hover path {
+    opacity: 0.3;
+
+    fill: @navi;
+  }
+
+  &:hover rect {
+    opacity: 0.3;
+
+    fill: @navi;
+  }
+
+  &:active path {
+    opacity: 0.5;
+
+    fill: @navi;
+  }
+
+  &:active rect {
+    opacity: 0.5;
+
+    fill: @navi;
+  }
+}
+
+.editor__tool-label--active {
+  opacity: 1;
+}
+
+.editor__tool-label--active path,
+.editor__tool-label--active rect {
+  fill: @pink;
 }
 
 .editor__input {
-  display: none;
-}
-
-.editor__input--active {
   position: absolute;
   top: 96px;
   left: 40px;
 
   display: block;
   width: 240px;
-  height: 2px;
+  height: 1px;
   margin: 0;
 
   background-color: #000000;
+  border: none;
   outline: none;
-
-  appearance: none;
 }
 
-.editor__input::-webkit-slider-thumb {
-  width: 15px;
-  height: 15px;
+.editor__input--active {
+  display: block;
+}
+
+.editor__runner {
+  position: absolute;
+  top: 90px;
+  left: 230px;
+
+  width: 10px;
+  height: 10px;
+
+  border: 2px solid @pink;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
 
   border: 2px solid @pink;
   border-radius: 50%;
@@ -76,6 +124,17 @@
 .editor__input::-webkit-slider-thumb:active {
   background-color: @pink;
 }
+
+::-moz-range-thumb:active {
+  background-color: @pink;
+}
+
+
+.editor__input::-ms-fill-lower,
+.editor__input::-ms-fill-upper {
+  background: transparent;
+}
+
 /*.editor__tool-button {
   display: flex;
   justify-content: center;
@@ -177,6 +236,7 @@
   }
 }
 
+
 @media (min-width: @tablet-width) {
   .editor__container {
     display: flex;
@@ -214,6 +274,7 @@
     width: 275px;
     height: 55px;
     margin: 0;
+    margin-bottom: 15px;
     padding: 0;
 
     border-bottom: 1px solid #dedfe1;
@@ -236,23 +297,44 @@
     margin: 0;
     padding: 0;
     padding-top: 8px;
+
+    opacity: 1;
+  }
+
+  .editor__tool-label path,
+  .editor__tool-label rect {
+    fill: @pink;
   }
 
   .editor__input {
     position: absolute;
-    top: 20px;
+    top: 22px;
     left: 52px;
 
     display: block;
     width: 202px;
-    height: 2px;
+    height: 1px;
     margin: 0;
     padding: 0;
 
     background-color: #000000;
     outline: none;
+  }
 
-    appearance: none;
+  .editor__runner {
+    top: 14px;
+  }
+
+  .editor__runner--cropp {
+    left: 200px;
+  }
+
+  .editor__runner--fill {
+    left: 80px;
+  }
+
+  .editor__runner--contrast {
+    left: 150px;
   }
 
   .editor__button {
@@ -261,13 +343,14 @@
   }
 
   .editor__button--send {
-    margin-top: 67px;
+    margin-top: 55px;
   }
 
   .editor__button--reset {
     margin-top: 24px;
   }
 }
+
 
 @media (min-width: @desktop-width) {
   .editor {
@@ -313,9 +396,9 @@
   }
 
   .editor__tool-item--contrast svg {
-    width: 30px;
-    height: 30px;
-    padding-left: 5px;
+    width: 52px;
+    height: 34px;
+    margin-top: 6px;
   }
 
   .editor__tool-label {
@@ -338,14 +421,24 @@
 
     background-color: #000000;
     outline: none;
+  }
 
-    appearance: none;
+  .editor__runner--cropp {
+    left: 165px;
+  }
+
+  .editor__runner--fill {
+    left: 340px;
+  }
+
+  .editor__runner--contrast {
+    left: 250px;
   }
 
   .editor__buttons-wrap {
     display: flex;
     justify-content: space-between;
-    min-height: 200px;
+    min-height: 190px;
   }
 
   .editor__button {

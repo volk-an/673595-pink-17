@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Пинк</title>
     <link href="css/style.css" rel="stylesheet">
-
   </head>
   <body class="site-body">
     <!--<div class="site-body__container">-->
-      <header class="page-header page__header--main">
+      <header class="page-header">
         <div class="page-header__container">
           <div class="page-header__top-navigation">
-            <a class="page-header__logo" href="index.html">
+            <a class="page-header__logo" href="index.html" aria-label="Логотип Пинк">
               <svg x="0px" y="0px" width="147px" height="60px" viewBox="0 0 147 60" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
                 <g class="page-header__logo-white-mobile">
                   <g>
@@ -63,7 +62,7 @@
               </svg>
             </a>
             <div class="page-header__togle-wrap page-header__togle-wrap--nojs">
-            <button class="page-header__button page-header__button--open page-header__buton--togle">
+            <button class="page-header__button page-header__button--open" aria-label="открыть меню">
               <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.945px" height="24.007px" viewBox="0 0 49.945 24.007" enable-background="new 0 0 49.945 24.007" xml:space="preserve">
               <g id="miu">
                 <g id="editor_list_view_hambuger_menu_glyph">
@@ -77,16 +76,16 @@
               </g>
               </svg>
             </button>
-            <button class="page-header__button page-header__button--close">
+            <button class="page-header__button page-header__button--close" aria-label="закрыть меню">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.867px" height="23.867px" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
               <path fill="#FFFFFF" d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z"/>
               </svg>
             </button>
           </div>
           </div>
-          <nav class="page_header__item main-navigation">
+          <nav class="main-navigation">
             <ul class="main-navigation__list">
-              <li class="main-navigation__item main-navigation__item--active">
+              <li class="main-navigation__item">
                 <a class="main-navigation__link main-navigation__link--current" href="#" >Главная</a>
               </li>
               <li class="main-navigation__item">
@@ -153,7 +152,7 @@
               <p class="researching__hours">24</p>
             </div>
             <div class="researching__wrap">
-              <h2 class="researching__title">Эффект <br> на 24 часа!</h2>
+              <h2 class="researching__title">Эффект <span class="researching__title-down">на 24 часа!</span></h2>
               <p class="researching__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
               <a class="researching__link" href="#">Узнать больше об исследовании</a>
             </div>
@@ -179,25 +178,25 @@
           <div class="price__container">
             <div class="price__table-container">
               <table class="price__table">
-                <tr class="ptice__header-row">
+                <tr class="price__header-row">
                   <th class="visually-hidden price__option-title">Тариф</th>
                   <th class="price__cell price__header-cell">База<span class="price__price-value">1,99 USD</span></th>
                   <th class="price__cell price__header-cell price__header-cell--hit">Стандарт<span class="price__price-value">3,99 USD</span></th>
                   <th class="price__cell price__header-cell">Анлим<span class="price__price-value">9,99 USD</span></th>
                 </tr>
-                <tr class="ptice__option">
+                <tr class="price__option">
                   <th class="price__cell price__option-title">Розовый фильтр</th>
                   <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Розовый фильтр</span></td>
                   <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Розовый фильтр</span></td>
                   <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Розовый фильтр</span></td>
                 </tr>
-                <tr class="ptice__option">
+                <tr class="price__option">
                   <th class="price__cell price__option-title">Смайлики</th>
                   <td class="price__cell price__option-value price__option-value--no"><span class="price__option-name">Смайлики</span></td>
                   <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Смайлики</span></td>
                   <td class="price__cell price__option-value price__option-value--yes"><span class="price__option-name">Смайлики</span></td>
                 </tr>
-                <tr class="ptice__option">
+                <tr class="price__option">
                   <th class="price__cell price__option-title">Комментарии</th>
                   <td class="price__cell price__option-value price__option-value--no"><span class="price__option-name">Комментарии</span></td>
                   <td class="price__cell price__option-value price__option-value--no"><span class="price__option-name">Комментарии</span></td>
@@ -230,7 +229,7 @@
                 <p class="contacts__item">ул. Большая<br>Конюшенная, 19/8</p>
               </div>
             </div>
-            <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.2118029871913!2d30.32335399785678!3d59.93868140169556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sgr!4v1566206388369!5m2!1sru!2sgr" width=320" height="200" allowfullscreen></iframe>
+            <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.2118029871913!2d30.32335399785678!3d59.93868140169556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sgr!4v1566206388369!5m2!1sru!2sgr" width="320" height="200" allowfullscreen></iframe>
           </div>
         </section>
       </main>
@@ -277,7 +276,6 @@
           </p>
         </div>
       </footer>
-
-  <script src="js/opennav.js"></script>
+      <script src="js/opennav.js"></script>
   </body>
 </html>

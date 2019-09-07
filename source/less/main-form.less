@@ -64,7 +64,6 @@
 }
 
 .main-form__title {
-  display: block;
   width: auto;
   min-height: 36px;
   margin: 0 auto;
@@ -242,14 +241,14 @@
   padding: 30px 0 10px;
 }
 
-.main-forn__pink-star {
+.main-form__pink-star {
   margin: 0;
   padding: 0;
 
   color: @pink;
 }
 
-.main-form__info-text--hidden {
+.main-form__info-text {
   display: none;
   margin: 0;
   padding: 0;
@@ -328,9 +327,11 @@
   .main-form__title {
     position: absolute;
     top: -10px;
+    right: 0;
+    left: 0;
 
-    display: block;
     min-height: 14px;
+    margin: 0 auto;
     margin-top: 0;
 
     font-size: 14px;
@@ -343,21 +344,20 @@
   }
 
   .main-form__title--user-achievements {
-    left: 90px;
-
-    padding: 5px 30px;
+    width: 380px;
   }
 
   .main-form__title--contacts {
-    left: 190px;
+    display: block;
+    width: 200px;
   }
 
   .main-form__title--application {
-    left: 130px;
+    width: 320px;
   }
 
   .main-form__title--message {
-    left: 200px;
+    width: 190px;
   }
 
   .main-form__list {
@@ -564,12 +564,12 @@
 
   .main-form__fieldset--filters {
     width: 431px;
-    margin: 0;
+    margin-top: 10px;
   }
 
   .main-form__fieldset--contacts {
     width: 940px;
-    margin: 0;
+    margin-top: 10px;
   }
 
   .main-form__fieldset--message {
@@ -580,7 +580,7 @@
 
   .main-form__fieldset--user-achievements {
     width: 940px;
-    margin-top: 56px;
+    margin-top: 62px;
   }
 
   .main-form__wrap {
@@ -616,12 +616,14 @@
     justify-content: space-between;
     width: 820px;
     margin: 0 auto;
+    margin-top: 20px;
     padding: 0;
   }
 
   .main-form__list--application {
     width: 360px;
-    margin-top: 14px;
+    margin-top: 20px;
+    margin-bottom: 45px;
     padding-left: 75px;
   }
 
@@ -630,7 +632,7 @@
     flex-wrap: wrap;
     width: 820px;
     margin: 0 auto;
-    margin-top: 43px;
+    margin-top: 53px;
     margin-bottom: 15px;
   }
 
@@ -656,7 +658,7 @@
   }
 
   .main-form__item--radio-item {
-    margin-top: 35px;
+    margin-top: 30px;
   }
 
   .main-form__item--contacs-item {
@@ -731,6 +733,10 @@
     margin-bottom: 15px;
   }
 
+  .main-form__filter-label--checkbox {
+    padding: 6px 2px 6px 60px;
+  }
+
   .main-form__data-input--phone-number,
   .main-form__data-input--email {
     flex-grow: 0;
@@ -741,13 +747,13 @@
 
   .main-form__data-input--message {
     width: 776px;
-    min-height: 84px;
-    margin-top: 36px;
+    min-height: 92px;
+    margin-top: 40px;
     margin-bottom: 45px;
     overflow: hidden;
   }
 
-  .main-form__info-text--hidden {
+  .main-form__info-text {
     display: inline;
   }
 }
